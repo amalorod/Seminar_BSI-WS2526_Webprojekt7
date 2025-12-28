@@ -1,0 +1,12 @@
+body {
+  background-color: #fdf5e6;
+  transition: 0.4s background-color;
+  
+}
+
+body.changeColor {
+   background-color: black;
+
+   
+}
+

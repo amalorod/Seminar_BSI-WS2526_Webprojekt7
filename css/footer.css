@@ -1,0 +1,44 @@
+/* Style the tab buttons */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+  border-radius: 0px;
+  margin: 0;
+}
+
+/* color on hover */
+.tablink:hover {
+  background-color: #777;
+}
+
+
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 50px;
+  text-align: center;
+  height: 420px;
+  overflow: hidden;
+  
+}
+
+/* Style each tab content individually */
+#Impressum {
+  background-color: #6b3e26;
+}
+#Ersteller {
+  background-color: #604924;
+}
+#Infos {
+  background-color: #be9b7b;
+}
+#Rahmeninfo {
+  background-color: #4b3832;
+}

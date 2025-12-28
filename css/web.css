@@ -1,0 +1,151 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Orbitron, sans-serif;
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 110%;
+}
+.hero-image {
+  background-image: url(../img/porscheVintageHome.jpg);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.hero-imageRace {
+  background-image: url(../img/porscheRace.jpg);
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.hero-imageModelle {
+  background-image: url(../img/porsche-oldtimer.jpg);
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.hero-imageGeschichte {
+  background-image: url(../img/porschegeschichte.jpeg);
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.head {
+  text-align: center;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.w3-bar.scrolled {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  position: fixed;
+  z-index: 5;
+}
+.w3-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  
+}
+
+iframe {
+  width: 80%;
+  height: 650px;
+}
+#map {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/*Einstellungen der Sidebar */
+/* Problem: Topbar geht über die Sidebar */
+.w3-sidebar, .w3-bar-block, #mySidebar {
+  position: relative;
+
+  z-index: 1000; /*Problem gelöst*/
+}
+
+
+
+/* Dark Mode */
+
+/* Wenn der Body die Klasse "dark-mode" hat: */
+html.dark-mode {
+    filter: invert(1) hue-rotate(180deg);
+}
+
+/* WICHTIG: Bilder, Videos und Hintergründe wieder ivertieren */
+html.dark-mode img, 
+html.dark-mode video,
+
+html.dark-mode .hero-imageModelle,
+html.dark-mode .hero-imageGeschichte, 
+html.dark-mode .hero-imageRace,
+html.dark-mode .hero-image, 
+body.backgrgound-image { 
+    filter: invert(1) hue-rotate(180deg);
+}
+
+
+
+/* Schriftgröße */
+
+/* 1. Basisgröße des Body erhöhen */
+html.large-font body {
+  /* Wir nutzen !important, um W3.CSS zu überschreiben */
+  font-size: 140% !important; 
+  transition: font-size 0.3s ease;
+}
+
+/* 2. Ausnahme für H1 (soll gleich bleiben) */
+html.large-font h1 {
+  /* W3.CSS Standard ist 36px, das frieren wir hier ein */
+  font-size: 36px !important; 
+}
+
+/* 3. WICHTIG: Überschriften (h2-h6) "aufschließen" */
+/* W3.CSS setzt hier feste Pixel (z.B. 24px). 
+   Wir ändern das auf 'em', damit sie sich an der neuen Body-Größe orientieren. */
+html.large-font h2,
+html.large-font h3,
+html.large-font h4,
+html.large-font h5,
+html.large-font h6 {
+  font-size: 1.25em !important; 
+}
+
+/* 4. Auch Buttons und Navigations-Elemente anpassen */
+/* .w3-button hat oft feste Größen, die müssen wir auch relativ machen */
+html.large-font .w3-button,
+html.large-font .w3-bar-item {
+   font-size: 1em !important;
+}
+
+/* 5. Icons vergrößern */
+html.large-font .fa, 
+html.large-font .fas, 
+html.large-font .fa-solid {
+    font-size: 1.3em !important;
+}
