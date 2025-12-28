@@ -1,0 +1,22 @@
+[
+  {
+    "titel": "Modellübersicht",
+    "text": "Der Klassiker, Sportwagen, Ikone, Heckmotor, 356, 911, 924, 928, 944, 959, 968 ",
+    "link": "./modelle.html#geheZuModelle"
+  },
+  {
+    "titel": "Rennsport",
+    "text": "Rennsport, Geschichte, 24 Stunden Rennen, Gewinner, Le Mans, Motorsport",
+    "link": "./rennsport.html#geheZuRennsport"
+  },
+  {
+    "titel": "Geschichte",
+    "text": "Erfunden, Jahr, Wann, wann, Gründung, Porsche, Historie, Historisch",
+    "link": "./geschichte.html#geheZuGeschichte"
+  },
+  {
+    "titel": "Anmeldung/Account",
+    "text": "Login, Vorname, Eingeben, eingeben, Formular, Formularfeld, Anmeldung, Account, Auswahl",
+    "link": "./contact.html#geheZuAnmeldung"
+  }
+]
