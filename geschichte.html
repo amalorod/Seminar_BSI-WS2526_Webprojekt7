@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Geschichte</title>
+
+
+    <script src="js/global.js" defer></script>
+    <script src="js/ajax.js" defer></script>
+    <script src="js/footer.js" defer></script>
+    
+    <script src="js/geschichte.js" defer></script>
+    
+    
+
+    <link rel="icon" href="img/p-letter.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/web.css" />
+    <link rel="stylesheet" href="css/geschichte.css" />
+    <link rel="stylesheet" href="css/ajax-search-box.css" />
+      
+   
+  </head>
+
+
+  <body>
+
+
+
+    <!-- Topbar-->
+    <div class="hero-imageGeschichte">
+      <div class="w3-bar w3-top" id="topbar">
+
+        <a href="javascript:void(0)"
+          class="w3-bar-item w3-button w3-xlarge w3-hover-brown"
+          onclick="w3_open()"
+          ><i class="fa-solid fa-bars"style="color:white"></i></a>
+
+        <a href="index.html"
+          class="head w3-bar-item w3-button w3-xlarge w3-hover-brown w3-center"
+          ><h1 style="color:white">Porsche</h1></a>
+
+        <a href="contact.html"
+          class="w3-bar-item w3-button w3-right w3-xlarge w3-hover-brown"
+          ><i class="fa-solid fa-user" style="color:white"></i></a>
+
+      </div>
+    </div>
+
+
+
+    <!-- Sidebar -->
+    <div
+      class="w3-sidebar w3-bar-block w3-border-right w3-animate-left w3-sand"
+      style="display: none; width: 250px"
+      id="mySidebar">
+
+      <button onclick="closeAllModals()"
+        onclick="w3_close()" 
+        class="w3-bar-item w3-large w3-left w3-brown">
+        <i class="fa-solid fa-times"></i>
+      </button>
+
+      <a href="index.html" class="w3-bar-item w3-button"><h3>Home</h3></a>
+      <a href="rennsport.html" class="w3-bar-item w3-button"><h3>Rennsport</h3></a>
+      <a href="modelle.html" class="w3-bar-item w3-button"><h3>Modelle</h3></a>
+      <a href="geschichte.html" class="w3-bar-item w3-button"><h3>Geschichte</h3></a>
+      <a href="contact.html" class="w3-bar-item w3-button"><h3>Account</h3></a>
+      <a  onclick="openSearch()" class="w3-bar-item w3-button"><h3>Suche 🔍 </h3></a>
+      <br>
+      <br>
+      <br>
+      <a  onclick="toggleDarkMode()" class="w3-bar-item w3-button w3-white w3-center"><h3>🌓 </h3></a>
+      <a  onclick="increaseFontSize()" class="w3-bar-item w3-button w3-white w3-center"><h3>🔎</h3></a>
+    </div>
+
+
+    <!-- Zeitstrahl -->
+    <div class="w3-container w3-sand w3-padding-64">
+      <h2 id="geheZuGeschichte">Die Geschichte von Porsche – Vision und Innovation</h2>
+
+      <p>
+        Porsche wurde 1931 von Ferdinand Porsche in Stuttgart gegründet –
+        zunächst als Entwicklungs- und Beratungsunternehmen für Automobile.
+        Schon früh prägte Porsche die Automobilwelt mit visionären Ideen und
+        technischer Präzision.
+      </p>
+
+      <div class="content-section"></div>
+
+      <div class="timeline">
+        <div class="container left">
+          <div class="content w3-sand w3-right">
+            <button
+              onclick="toggleAccordion(this, 'y1950er')"
+              class="w3-button w3-brown w3-round"
+              style="width: 200px; font-size: 32px">
+              1950er
+            </button>
+            <div id="y1950er" style="display: none"></div>
+          </div>
+        </div>
+        <div class="container right">
+          <div class="content w3-sand">
+            <button
+              onclick="toggleAccordion(this, 'y1960er')"
+              class="w3-button w3-brown w3-round"
+              style="width: 200px; font-size: 32px">
+              1960er
+            </button>
+            <div id="y1960er" style="display: none"></div>
+          </div>
+        </div>
+        <div class="container left">
+          <div class="content w3-sand w3-right">
+            <button
+              onclick="toggleAccordion(this, 'y1970er')"
+              class="w3-button w3-brown w3-round"
+              style="width: 200px; font-size: 32px">
+              1970er
+            </button>
+            <div id="y1970er" style="display: none"></div>
+          </div>
+        </div>
+        <div class="container right">
+          <div class="content w3-sand">
+            <button
+              onclick="toggleAccordion(this, 'y1980er')"
+              class="w3-button w3-brown w3-round"
+              style="width: 200px; font-size: 32px">
+              1980er
+            </button>
+            <div id="y1980er" style="display: none"></div>
+          </div>
+        </div>
+        <div class="container left">
+          <div class="content w3-sand w3-right">
+            <button
+              onclick="toggleAccordion(this, 'y1990er')"
+              class="w3-button w3-brown w3-round"
+              style="width: 200px; font-size: 32px">
+              1990er
+            </button>
+            <div id="y1990er" style="display: none"></div>
+          </div>
+        </div>
+        <div class="container right">
+          <div class="content w3-sand">
+            <button
+              onclick="toggleAccordion(this, 'y2000er')"
+              class="w3-button w3-brown w3-round"
+              style="width: 200px; font-size: 32px">
+              2000er
+            </button>
+            <div id="y2000er" style="display: none"></div>
+          </div>
+        </div>
+        <div class="container left">
+          <div class="content w3-sand w3-right">
+            <button
+              onclick="toggleAccordion(this, 'y2010er')"
+              class="w3-button w3-brown w3-round"
+              style="width: 200px; font-size: 32px">
+              2010er
+            </button>
+            <div id="y2010er" style="display: none"></div>
+          </div>
+        </div>
+        <div class="container right">
+          <div class="content w3-sand">
+            <button
+              onclick="toggleAccordion(this, 'y2020er')"
+              class="w3-button w3-brown w3-round"
+              style="width: 200px; font-size: 32px">
+              2020er
+            </button>
+            <div id="y2020er" style="display: none"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <!--Footer-->
+    <div class="w3-footer w3-sand w3-center">
+      <div id="Impressum" class="tabcontent">
+        <h1>Impressum</h1>
+        <div class="footerFrame">
+          <p>
+            Diese Webseite wurde im Zuge eines Gruppenprojekts für das Modul
+            Basissysteme der Informationsverarbeitung erstellt. Die
+            Veranstaltung findet am Institut für Digital Humanities an der
+            Universität zu Köln statt.
+          </p>
+        </div>
+      </div>
+
+      <div id="Ersteller" class="tabcontent">
+        <h1>Gruppenmitglieder</h1>
+
+        <div class="footerFrame">
+          <p>
+            Joris Kasten <br />
+            Benedikt Benz <br />
+            Eric Steffens <br />
+            Alic Malorodow<br />
+          </p>
+        </div>
+      </div>
+
+      <div id="Infos" class="tabcontent">
+        <h1>Infos</h1>
+        <p>
+          Die Webseite wurde mit Elementen von W3.CSS erstellt. Zusätzlich
+          wurden die Inhalte mit externen CSS-Dateien angepasst. Interaktive und
+          funktionale Elemente wurden mit JavaScript erstellt. Die zu sehenden
+          Fotos haben eine absolute Verlinkung, um Darstellungsprobleme zu
+          vermeiden. Eine Ausnahme: Das Hintergrundbild auf der Startseite. Hier
+          liegt ein relativer Pfad vor.
+        </p>
+      </div>
+
+      <div id="Rahmeninfo" class="tabcontent">
+        <h1>Wusstest du schon?</h1>
+
+        <p>
+          Lamborghini ist vielleicht bekannt für seine Landwirtschaftsmaschinen,
+          aber Porsche baute in den 50er- und 60er-Jahren über 125.000
+          Traktoren. Sie designten auch Gabelstapler und Flugzeugcockpits. Kein
+          Wunder also, dass ihre Autos auf der Rennstrecke förmlich fliegen...
+        </p>
+        <img
+          src="img/Screenshot%202025-11-11%20182048.png"
+          width="210"
+          height="150"
+          alt="bild1" />
+      </div>
+
+      <button
+        class="tablink"
+        onclick="openCity('Impressum', this, '#6b3e26')"
+        id="defaultOpen">
+        Impressum
+      </button>
+      <button class="tablink" onclick="openCity('Ersteller', this, '#604924')">
+        Gruppenmitglieder
+      </button>
+      <button class="tablink" onclick="openCity('Infos', this, '#be9b7b')">
+        Infos
+      </button>
+      <button class="tablink" onclick="openCity('Rahmeninfo', this, '#4b3832')">
+        Wusstest du schon?
+      </button>
+    </div>
+
+
+
+
+      <div id="modalSFrame" >
+
+        <!-- Modal content -->
+        <div class="modal-contentS">
+
+            <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Suche nach Modellen, Geschichte...">
+            <div id="searchResultBox"></div>
+
+
+        </div>
+        </div>
+      </div>
+
+
+
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" ></script>
+  </body>
+</html>

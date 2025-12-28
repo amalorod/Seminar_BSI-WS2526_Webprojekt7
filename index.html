@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Porsche</title>
+
+
+    <script src="js/ajax.js" defer></script>
+    <script src="js/footer.js" defer></script>
+    
+    <script src="js/global.js" defer></script>
+
+    <link rel="icon" href="img/p-letter.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/web.css" />
+    <link rel="stylesheet" href="css/ajax-search-box.css" />
+    
+  </head>
+
+  <body>
+
+
+
+
+    <!--  Topbar-->
+    <div class="hero-image">
+      <div class="w3-bar w3-top" id="topbar">
+        <a
+          href="javascript:void(0)"
+          class="w3-bar-item w3-button w3-xlarge w3-hover-brown"
+          onclick="w3_open()"
+          ><i class="fa-solid fa-bars"></i
+        ></a>
+        <a
+          href="index.html"
+          class="head w3-bar-item w3-button w3-xlarge w3-hover-brown w3-center"
+          ><h1>Porsche</h1></a
+        >
+        <a
+          href="contact.html"
+          class="w3-bar-item w3-button w3-right w3-xlarge w3-hover-brown"
+          ><i class="fa-solid fa-user"></i
+        ></a>
+      </div>
+    </div>
+
+
+
+
+
+
+    <!-- Sidebar -->
+    <div
+      class="w3-sidebar w3-bar-block w3-border-right w3-animate-left w3-sand"
+      style="display: none; width: 250px"
+      id="mySidebar">
+      <button onclick="closeAllModals()"
+        onclick="w3_close()" 
+        class="w3-bar-item w3-large w3-left w3-brown">
+        <i class="fa-solid fa-times"></i>
+      </button>
+
+
+      <a href="index.html" class="w3-bar-item w3-button"><h3>Home</h3></a>
+      <a href="rennsport.html" class="w3-bar-item w3-button"><h3>Rennsport</h3></a>
+      <a href="modelle.html" class="w3-bar-item w3-button"><h3>Modelle</h3></a>
+      <a href="geschichte.html" class="w3-bar-item w3-button"><h3>Geschichte</h3></a>
+      <a href="contact.html" class="w3-bar-item w3-button"><h3>Account</h3></a>
+      <a  onclick="openSearch()" class="w3-bar-item w3-button"><h3>Suche 🔍 </h3></a>
+      <br>
+      <br>
+      <br>
+      <a  onclick="toggleDarkMode()" class="w3-bar-item w3-button w3-white w3-center"><h3>🌓 </h3></a>
+      <a  onclick="increaseFontSize()" class="w3-bar-item w3-button w3-white w3-center"><h3>🔎</h3></a>
+
+    </div>
+    <div class="w3-container w3-sand w3-padding">
+      <h1 class="w3-center">Entdecken</h1>
+
+      <div id="bilderEntdecken" class="w3-row-padding w3-center">
+        <!-- Erstes Bild -->
+        <div class="w3-col s12 m4 w3-padding">
+          <h3>Geschichte</h3>
+          <img
+            src="img/porschegeschichte.jpeg"
+            class="w3-round-large w3-image w3-hover-opacity"
+            style="width: 100%; cursor: pointer"
+            alt="Taycan"
+            onclick="window.location.href='geschichte.html'" />
+        </div>
+
+        <!-- Zweites Bild -->
+        <div class="w3-col s12 m4 w3-padding">
+          <h3>Rennsport</h3>
+          <img
+            src="img/porscheRace.jpg"
+            class="w3-round-large w3-image w3-hover-opacity"
+            style="width: 100%; cursor: pointer"
+            alt="gt3"
+            onclick="window.location.href='rennsport.html'" />
+        </div>
+
+        <!-- drittes Bild -->
+        <div class="w3-col s12 m4 w3-padding">
+          <h3>Modelle</h3>
+          <img
+            src="img/porsche-oldtimer.jpg"
+            class="w3-round-large w3-image w3-hover-opacity"
+            style="width: 100%; cursor: pointer"
+            alt="cayenne"
+            onclick="window.location.href='modelle.html'" />
+        </div>
+      </div>
+      <div class="w3-container w3-sand w3-padding-64 w3-margin">
+        <h2>Porsche Vintage – Leidenschaft mit Geschichte</h2>
+        <p>
+          Porsche steht seit jeher für mehr als nur Geschwindigkeit. Es geht um
+          Charakter, Präzision und das Gefühl, Teil einer lebendigen Geschichte
+          zu sein. Unsere Leidenschaft gilt den Klassikern – jenen Fahrzeugen,
+          die nicht nur gebaut, sondern geschaffen wurden.
+        </p>
+        <p>
+          Hier findest du sorgfältig restaurierte Modelle, originale Teile und
+          Hintergrundgeschichten zu legendären Fahrzeugen, die den Motorsport
+          geprägt haben. Jeder Porsche erzählt seine eigene Geschichte – von der
+          Rennstrecke bis zur Landstraße, von der Vision Ferry Porsches bis zur
+          Liebe jedes Besitzers, der ihn erhält.
+        </p>
+        <p>
+          Ob du suchst, sammelst oder einfach nur träumst – Porsche Vintage
+          bringt dich zurück zu den Wurzeln echter Ingenieurskunst.
+        </p>
+      </div>
+    </div>
+
+    
+    
+    
+    
+    <!-- Karte-->
+    <div class="w3-container w3-sand w3-padding-64">
+      <div id="map">
+        <iframe
+          src="https://www.google.com/maps/d/embed?mid=1cGUyaZrJ2zDtoDJzt4ZUWloC2gtgbBA&ehbc=2E312F&noprof=1"
+          title="Standorte der Porsche Werke">
+        </iframe>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+    <div class="w3-footer w3-sand w3-center">
+      <div id="Impressum" class="tabcontent">
+        <h1>Impressum</h1>
+        <div class="footerFrame">
+          <p>
+            Diese Webseite wurde im Zuge eines Gruppenprojekts für das Modul
+            Basissysteme der Informationsverarbeitung erstellt. Die
+            Veranstaltung findet am Institut für Digital Humanities an der
+            Universität zu Köln statt.
+          </p>
+        </div>
+      </div>
+
+      <div id="Ersteller" class="tabcontent">
+        <h1>Gruppenmitglieder</h1>
+
+        <div class="footerFrame">
+          <p>
+            Joris Kasten <br />
+            Benedikt Benz <br />
+            Eric Steffens <br />
+            Alic Malorodow<br />
+          </p>
+        </div>
+      </div>
+
+      <div id="Infos" class="tabcontent">
+        <h1>Infos</h1>
+        <p>
+          Die Webseite wurde mit Elementen von W3.CSS erstellt. Zusätzlich
+          wurden die Inhalte mit externen CSS-Dateien angepasst. Interaktive und
+          funktionale Elemente wurden mit JavaScript erstellt. Die zu sehenden
+          Fotos haben eine absolute Verlinkung, um Darstellungsprobleme zu
+          vermeiden. Eine Ausnahme: Das Hintergrundbild auf der Startseite. Hier
+          liegt ein relativer Pfad vor.
+        </p>
+      </div>
+
+      <div id="Rahmeninfo" class="tabcontent">
+        <h1>Wusstest du schon?</h1>
+
+        <p>
+          Lamborghini ist vielleicht bekannt für seine Landwirtschaftsmaschinen,
+          aber Porsche baute in den 50er- und 60er-Jahren über 125.000
+          Traktoren. Sie designten auch Gabelstapler und Flugzeugcockpits. Kein
+          Wunder also, dass ihre Autos auf der Rennstrecke förmlich fliegen...
+        </p>
+        <img
+          src="img/Screenshot%202025-11-11%20182048.png"
+          width="210"
+          height="150"
+          alt="Bild1" />
+      </div>
+
+      <button
+        class="tablink"
+        onclick="openCity('Impressum', this, '#6b3e26')"
+        id="defaultOpen">
+        Impressum
+      </button>
+      <button class="tablink" onclick="openCity('Ersteller', this, '#604924')">
+        Gruppenmitglieder
+      </button>
+      <button class="tablink" onclick="openCity('Infos', this, '#be9b7b')">
+        Infos
+      </button>
+      <button class="tablink" onclick="openCity('Rahmeninfo', this, '#4b3832')">
+        Wusstest du schon?
+      </button>
+    </div>
+
+
+
+
+
+
+    <div id="modalSFrame" >
+
+
+        <!-- Modal content -->
+        <div class="modal-contentS">
+          
+
+          
+            <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Suche nach Modellen, Geschichte...">
+            <div id="searchResultBox"></div>
+
+
+        </div>
+        </div>
+      </div>
+    
+    
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" ></script>
+  </body>
+</html>

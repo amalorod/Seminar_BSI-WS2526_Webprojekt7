@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Login</title>
+    <link rel="icon" href="img/p-letter.jpg" type="image/x-icon" />
+
+
+
+
+    <script src="js/global.js" defer></script>
+    
+    <script src="js/footer.js" defer></script>
+    <script src="js/contact.js" defer></script>
+    <script src="js/ajax.js" defer></script>
+
+
+
+    
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap"  />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+   
+    <link rel="stylesheet" href="css/web.css" />
+    <link rel="stylesheet" href="css/contact_style.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/ajax-search-box.css" />
+
+   
+    
+  </head>
+
+  <body>
+ 
+    
+
+
+
+
+   <!--Topbar-->
+    
+    <div class="w3-bar w3-top" id="topbar">
+
+      <a href="javascript:void(0)"
+        class="w3-bar-item w3-button w3-xlarge w3-hover-brown"
+        onclick="w3_open()"
+        ><i class="fa-solid fa-bars"></i
+      ></a>
+
+      <a href="index.html"
+        class="head w3-bar-item w3-button w3-xlarge w3-hover-brown w3-center"
+        ><h1>Porsche</h1></a>
+      
+        <a href="contact.html"
+        class="w3-bar-item w3-button w3-right w3-xlarge w3-hover-brown"
+        ><i class="fa-solid fa-user"></i
+      ></a>
+    </div>
+   
+
+
+
+
+
+
+    <!-- Sidebar -->
+    <div
+      class="w3-sidebar w3-bar-block w3-border-right w3-animate-left w3-sand"
+      style="display: none; width: 250px"
+      id="mySidebar">
+
+      <button onclick="closeAllModals()" onclick="w3_close()"
+        class="w3-bar-item w3-large w3-left w3-brown">
+        <i class="fa-solid fa-times "></i>
+      </button>
+
+      <a href="index.html" class="w3-bar-item w3-button"><h3>Home</h3></a>
+      <a href="rennsport.html" class="w3-bar-item w3-button" ><h3>Rennsport</h3></a>
+      <a href="modelle.html" class="w3-bar-item w3-button"><h3>Modelle</h3></a>
+      <a href="geschichte.html" class="w3-bar-item w3-button"><h3>Geschichte</h3></a>
+      <a href="contact.html" class="w3-bar-item w3-button"><h3>Account</h3></a>
+      <a  onclick="openSearch()" class="w3-bar-item w3-button"><h3>Suche 🔍 </h3></a>
+      <br>
+      <br>
+      <br>
+      <a  onclick="toggleDarkMode()" class="w3-bar-item w3-button w3-white w3-center"><h3>🌓 </h3></a>
+      <a  onclick="increaseFontSize()" class="w3-bar-item w3-button w3-white w3-center"><h3>🔎</h3></a>
+      <br>
+      <br>
+    </div>
+    </div>
+
+
+
+
+
+    <!-- Anmeldeformular -->
+    <div id="geheZuAnmeldung" class="container">
+      <div class="flexbox">
+        <p><label for="fname">Dein Vorname:</label></p>
+    <input type="text" id="fname" name="fname" oninput="this.value = this.value.replace(/[^a-zA-Z]/g, '')" placeholder="" /><br /><br />
+    
+    <p><label for="lname">Dein Nachname:</label></p>
+    <input type="text" id="lname" name="lname" oninput="this.value = this.value.replace(/[^a-zA-Z]/g, '')" placeholder="" /><br /><br />
+    
+    <p><label for="email">Deine E-Mail:</label></p>
+    <input type="email" id="email" name="email" /> <br />
+    <br />
+    
+    <p><label for="alter">Dein Alter:</label></p>
+    <input type="number" id="alter" min="1" /> <br />
+    <br />
+
+    </div>
+
+      <div class="flexbox">
+        <h4 class="spueber">Welche Modelle suchst du?</h4>
+        <input type="checkbox" id="911" name="fav_language" value="911" />
+        <label for="911">911</label><br />
+        <input
+          type="checkbox"
+          id="Panamera"
+          name="fav_language"
+          value="Panamera" />
+        <label for="Panamera">Panamera</label><br />
+        <input
+          type="checkbox"
+          id="Cayenne"
+          name="fav_language"
+          value="Cayenne" />
+        <label for="Cayenne">Cayenne</label> <br />
+        <input type="checkbox" id="keins" name="fav_language" value="Keins" />
+        <label for="keins">Ich schaue mich um</label>
+
+        <br />
+        <br />
+
+        <h4 class="spueber">Dein Erfahrungslevel:</h4>
+
+        <input type="radio" id="beginner" value="Amateur" name="lvl" />
+        <label for="beginner"> Amateur</label> <br />
+
+        <input type="radio" id="fortge" value="Fortgeschrittener" name="lvl" />
+        <label for="fortge"> Fortgeschritten</label> <br />
+
+        <input type="radio" id="pro" value="Profi" name="lvl" />
+        <label for="pro"> Profi</label> <br />
+
+        <h4 class="spueber">Wie bist du auf diese Seite aufmerksam geworden?</h4>
+        <p>
+          <select name="Aufmerksam" id="attention">
+            <option disabled selected value>Auswahl</option>
+            <option value="fernseher">Fernsehwerbung</option>
+            <option value="linkedin">LinkedIn</option>
+            <option value="radio">Radio</option>
+            <option value="socialmedia">Social Media</option>
+          </select>
+          <br /><br />
+        </p>
+      </div>
+
+      <div class="flexbox">
+        <p>Wie geht es dir heute?</p>
+        <textarea
+          id="eigeneMeinung"
+          name="meinung"
+          rows="4"
+          cols="50"></textarea>
+        <br />
+      </div>
+
+      <div class="">
+        <p>
+          <button class="button1 w3-brown w3-padding" id="myBtn">
+            Abschicken
+          </button>
+        </p>
+      </div>
+
+
+
+
+
+      <!-- Modal Anmeldung -->
+      <div id="myModal" class="modal">
+
+
+
+        
+        <div class="modal-content">
+          <span class="close">&times;</span>
+
+          <div id="AusgabeGesamt"></div>
+          <br/>
+
+          <p ><a id ="cont" href="index.html">Mit diesen Daten fortfahren</a></p>
+        </div>
+
+      </div>
+    </div>
+
+
+
+      
+
+
+
+      <!-- Footer -->
+    <div class="w3-footer w3-sand w3-center">
+      <div id="Impressum" class="tabcontent">
+        <h1>Impressum</h1>
+        <div class="footerFrame">
+          <p>
+            Diese Webseite wurde im Zuge eines Gruppenprojekts für das Modul
+            Basissysteme der Informationsverarbeitung erstellt. Die
+            Veranstaltung findet am Institut für Digital Humanities an der
+            Universität zu Köln statt.
+          </p>
+        </div>
+      </div>
+
+      <div id="Ersteller" class="tabcontent">
+        <h1>Gruppenmitglieder</h1>
+
+        <div class="footerFrame">
+          <p>
+            Joris Kasten <br />
+            Benedikt Benz <br />
+            Eric Steffens <br />
+            Alic Malorodow<br />
+          </p>
+        </div>
+      </div>
+
+      <div id="Infos" class="tabcontent">
+        <h1>Infos</h1>
+        <p>
+          Die Webseite wurde mit Elementen von W3.CSS erstellt. Zusätzlich
+          wurden die Inhalte mit externen CSS-Dateien angepasst. Interaktive und
+          funktionale Elemente wurden mit JavaScript erstellt. Die zu sehenden
+          Fotos haben eine absolute Verlinkung, um Darstellungsprobleme zu
+          vermeiden. Eine Ausnahme: Das Hintergrundbild auf der Startseite. Hier
+          liegt ein relativer Pfad vor.
+        </p>
+      </div>
+
+      <div id="Rahmeninfo" class="tabcontent">
+        <h1>Wusstest du schon?</h1>
+
+        <p>
+          Lamborghini ist vielleicht bekannt für seine Landwirtschaftsmaschinen,
+          aber Porsche baute in den 50er- und 60er-Jahren über 125.000
+          Traktoren. Sie designten auch Gabelstapler und Flugzeugcockpits. Kein
+          Wunder also, dass ihre Autos auf der Rennstrecke förmlich fliegen...
+        </p>
+        <img
+          src="img/Screenshot%202025-11-11%20182048.png"
+          width="210"
+          height="150"
+          alt="Bild2" />
+      </div>
+
+      <button
+        class="tablink"
+        onclick="openCity('Impressum', this, '#6b3e26')"
+        id="defaultOpen">
+        Impressum
+      </button>
+      <button class="tablink" onclick="openCity('Ersteller', this, '#604924')">
+        Gruppenmitglieder
+      </button>
+      <button
+        class="tablink"
+        onclick="openCity('Infos', this, '#be9b7b')">
+        Infos
+      </button>
+      <button
+        class="tablink"
+        onclick="openCity('Rahmeninfo', this, '#4b3832')">
+        Wusstest du schon?
+      </button>
+    </div>
+
+    
+ 
+ 
+ 
+ 
+ 
+    <!-- Such-Element-->
+   <div id="modalSFrame" >
+
+        <!-- Modal content -->
+        <div class="modal-contentS">
+          
+
+          
+            <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Suche nach Modellen, Geschichte...">
+            <div id="searchResultBox"></div>
+
+
+        </div>
+        </div>
+      </div>
+
+      
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" ></script>
+  
+
+
+    
+
+
+
+  </body>
+</html>
